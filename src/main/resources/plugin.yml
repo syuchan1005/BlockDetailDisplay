@@ -1,0 +1,3 @@
+name: BlockDetailDisplay
+version: ${project.version}
+main: com.github.syuchan1005.blockdetaildisplay.BlockDetailDisplay
