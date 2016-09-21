@@ -1,5 +1,6 @@
 package com.github.syuchan1005.blockdetaildisplay;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,6 +16,7 @@ public final class BlockDetailDisplay extends JavaPlugin {
 			easyRegister = new EasyRegister(this);
 			easyRegister.registerCommand("blockdetaildisplay", "TestCommand", "/<command> <Text>", "", "You don't have Permission.", "bdd");
 			Util.init();
+			Bukkit.getScheduler().runTaskTimerAsynchronously(this, new MoveRunnable(), 5, 5);
 		} catch (ReflectiveOperationException | IOException e) {
 			e.printStackTrace();
 		}
